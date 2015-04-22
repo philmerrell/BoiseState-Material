@@ -1,0 +1,19 @@
+{
+  "name": "BoiseState-Material",
+  "version": "0.0.1",
+  "authors": [
+    "philmerrell <philmerrell@boisestate.edu>"
+  ],
+  "description": "Boise State template with Angular Material",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular-material": "master"
+  }
+}
