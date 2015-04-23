@@ -10,6 +10,8 @@ var changed     = require('gulp-changed'),
     requireDir  = require('require-dir'),
     sequence    = require('run-sequence');
 
+var tasks = requireDir('./gulp-tasks');
+
 
 
 gulp.task('clean', function() {
