@@ -8,11 +8,15 @@
 
   function AppConfig($mdThemingProvider) {
 
-    var boiseStatePalette = $mdThemingProvider.extendPalette('blue', {
+    var boiseStatePrimary = $mdThemingProvider.extendPalette('blue', {
       '500':  '09347A'
     });
+    var boiseStateAccent = $mdThemingProvider.extendPalette('orange', {
+      '500':  'F1632A'
+    });
 
-    $mdThemingProvider.definePalette('blue', boiseStatePalette);
+    $mdThemingProvider.definePalette('blue', boiseStatePrimary);
+    $mdThemingProvider.definePalette('orange', boiseStateAccent);
 
     $mdThemingProvider.theme('default')
       .primaryPalette('blue')

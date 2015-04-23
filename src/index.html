@@ -3,50 +3,127 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Boise State</title>
+    <meta name="viewport" content="initial-scale=1" />
 
     <!-- inject:css -->
     <!-- endinject -->
 
 </head>
-<body layout="column">
-    <md-toolbar layout="row" md-scroll-shrink="true">
-        <md-button class="menu" hide-gt-sm ng-click="app.toggleMenu()">menu</md-button>
-        <h1>Boise State Material</h1>
-    </md-toolbar>
-
-    <div flex layout="row">
-
-        <md-sidenav md-is-locked-open="$mdMedia('md')" md-component-id="left" class="md-whiteframe-z2"></md-sidenav>
-
-        <md-content flex id="content">
-            <p>Test content.</p>
-            <p>Test content.</p>
-            <p>Test content.</p>
-            <p>Test content.</p>
-            <p>Test content.</p>
-            <p>Test content.</p>
-            <p>Test content.</p>
-            <p>Test content.</p>
-            <p>Test content.</p>
-            <p>Test content.</p>
-            <p>Test content.</p>
-            <p>Test content.</p>
-            <p>Test content.</p>
-            <p>Test content.</p>
-            <p>Test content.</p>
-            <p>Test content.</p>
-            <p>Test content.</p>
-            <p>Test content.</p>
-            <p>Test content.</p>
-            <p>Test content.</p>
-            <p>Test content.</p>
-            <p>Test content.</p>
-            <p>Test content.</p>
-            <p>Test content.</p>
-            <p>Test content.</p>
+<body layout="row">
+    <!-- Side Menu-->
+    <md-sidenav md-is-locked-open="$mdMedia('gt-md')" md-component-id="left" class="md-whiteframe-z2">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h3>Boise State University</h3>
+            </div>
+        </md-toolbar>
+        <md-content flex class="md-default-theme">
+            Menu goes here...
         </md-content>
+    </md-sidenav>
 
+    <!-- Main Content Area -->
+    <div layout="column" flex role="main">
+        <md-toolbar >
+            <div class="md-toolbar-tools">
+                <md-button class="md-icon-button" aria-label="Menu" class="menu" hide-gt-md ng-click="app.toggleMenu()">
+                    <md-icon md-svg-icon="assets/icons/menu.svg"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <div layout="row">
+            <md-content flex id="content" style="background: #f6f6f6;">
+                <section>
+                    <md-card>
+                        <md-card-content style="font-size: 2.5em;">
+                            <h3>Boise State University</h3>
+                            <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                            <div layout="row"><span flex></span><md-button class="md-raised md-accent">Learn More</md-button></div>
+                        </md-card-content>
+                    </md-card>
+                </section>
+                <section>
+                    <md-subheader class="md-primary">Other things</md-subheader>
+                    <md-list layout="column" layout-padding>
+                        <md-list-item class="md-3-line">
+                            <div class="md-list-item-text">
+                                <h3>Philosophy </h3>
+                                <h4>Some other Text</h4>
+                                <p>
+                                    A bunch of other text in order to fill out this paragraph
+                                </p>
+                            </div>
+                        </md-list-item>
+                        <md-list-item class="md-3-line">
+                            <div class="md-list-item-text">
+                                <h3>Philosophy </h3>
+                                <h4>Some other Text</h4>
+                                <p>
+                                    A bunch of other text in order to fill out this paragraph
+                                </p>
+                            </div>
+                        </md-list-item>
+                        <md-list-item class="md-3-line">
+                            <div class="md-list-item-text">
+                                <h3>Philosophy </h3>
+                                <h4>Some other Text</h4>
+                                <p>
+                                    A bunch of other text in order to fill out this paragraph
+                                </p>
+                            </div>
+                        </md-list-item>
+                        <md-list-item class="md-3-line">
+                            <div class="md-list-item-text">
+                                <h3>Philosophy </h3>
+                                <h4>Some other Text</h4>
+                                <p>
+                                    A bunch of other text in order to fill out this paragraph
+                                </p>
+                            </div>
+                        </md-list-item>
+                        <md-list-item class="md-3-line">
+                            <div class="md-list-item-text">
+                                <h3>Philosophy </h3>
+                                <h4>Some other Text</h4>
+                                <p>
+                                    A bunch of other text in order to fill out this paragraph
+                                </p>
+                            </div>
+                        </md-list-item>
+                        <md-list-item class="md-3-line">
+                            <div class="md-list-item-text">
+                                <h3>Philosophy </h3>
+                                <h4>Some other Text</h4>
+                                <p>
+                                    A bunch of other text in order to fill out this paragraph
+                                </p>
+                            </div>
+                        </md-list-item>
+                        <md-list-item class="md-3-line">
+                            <div class="md-list-item-text">
+                                <h3>Philosophy </h3>
+                                <h4>Some other Text</h4>
+                                <p>
+                                    A bunch of other text in order to fill out this paragraph
+                                </p>
+                            </div>
+                        </md-list-item>
+                        <md-list-item class="md-3-line">
+                            <div class="md-list-item-text">
+                                <h3>Philosophy </h3>
+                                <h4>Some other Text</h4>
+                                <p>
+                                    A bunch of other text in order to fill out this paragraph
+                                </p>
+                            </div>
+                        </md-list-item>
+                    </md-list>
+                </section>
+            </md-content>
+        </div>
     </div>
+
+
 </body>
 
 <!-- inject:js -->

@@ -2,12 +2,13 @@ var gulp    = require('gulp'),
     config  = require('./build.config.js'),
     pkg     = require('./package.json');
 
-var changed   = require('gulp-changed'),
-    del       = require('del'),
-    inject    = require('gulp-inject'),
-    jshint    = require('gulp-jshint'),
-    merge     = require('merge-stream'),
-    sequence  = require('run-sequence');
+var changed     = require('gulp-changed'),
+    del         = require('del'),
+    inject      = require('gulp-inject'),
+    jshint      = require('gulp-jshint'),
+    merge       = require('merge-stream'),
+    requireDir  = require('require-dir'),
+    sequence    = require('run-sequence');
 
 
 
