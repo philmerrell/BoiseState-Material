@@ -17,8 +17,37 @@
                 <h3>Boise State University</h3>
             </div>
         </md-toolbar>
-        <md-content flex class="md-default-theme">
-            Menu goes here...
+        <md-content layout-padding flex class="md-default-theme">
+            <section>
+
+            </section>
+            <button class="md-button md-default-theme">
+                <div flex layout="row">Areas of Interest</div>
+                <span flex></span>
+            </button>
+            <md-divider></md-divider>
+            <section>
+                <p><strong>Degree Type</strong></p>
+                <md-radio-group ng-model="data.group1">
+                    <md-radio-button value="Apple"> Certificate </md-radio-button>
+                    <md-radio-button value="Banana"> Bachelors </md-radio-button>
+                    <md-radio-button value="Mango"> Masters </md-radio-button>
+                    <md-radio-button value="PhD"> PhD </md-radio-button>
+                </md-radio-group>
+            </section>
+            <md-divider></md-divider>
+            <section>
+                <p><strong>Campus Location</strong></p>
+                <md-radio-group ng-model="data.group1">
+                    <md-radio-button value="Boise"> Boise </md-radio-button>
+                    <md-radio-button value="Twin Falls"> Twin Falls </md-radio-button>
+                    <md-radio-button value="Online"> Online </md-radio-button>
+                </md-radio-group>
+            </section>
+            <md-divider></md-divider>
+            <p><strong>Math Requirement</strong></p>
+            <md-slider flex md-discrete ng-model="rating1" step="1" min="1" max="5" aria-label="rating">
+            </md-slider>
         </md-content>
     </md-sidenav>
 
@@ -43,6 +72,54 @@
                     </md-card>
                 </section>
                 <section>
+                    <md-subheader class="md-accent">Degrees</md-subheader>
+                    <md-grid-list
+                            md-cols-sm="1" md-cols-md="2" md-cols-gt-md="4"
+                            md-row-height-gt-md="1:1" md-row-height="2:2"
+                            md-gutter="12px" md-gutter-gt-sm="8px" >
+                        <md-grid-tile>
+                            <md-grid-tile-footer>
+                                <h3>Philosophy</h3>
+                            </md-grid-tile-footer>
+                        </md-grid-tile>
+                        <md-grid-tile>
+                            <md-grid-tile-footer>
+                                <h3>Anthropology</h3>
+                            </md-grid-tile-footer>
+                        </md-grid-tile>
+                        <md-grid-tile>
+                            <md-grid-tile-footer>
+                                <h3>Psychology</h3>
+                            </md-grid-tile-footer>
+                        </md-grid-tile>
+                        <md-grid-tile>
+                            <md-grid-tile-footer>
+                                <h3>Computer Science</h3>
+                            </md-grid-tile-footer>
+                        </md-grid-tile>
+                        <md-grid-tile>
+                            <md-grid-tile-footer>
+                                <h3>Biology</h3>
+                            </md-grid-tile-footer>
+                        </md-grid-tile>
+                        <md-grid-tile>
+                            <md-grid-tile-footer>
+                                <h3>Social Work</h3>
+                            </md-grid-tile-footer>
+                        </md-grid-tile>
+                        <md-grid-tile>
+                            <md-grid-tile-footer>
+                                <h3>Basket Weaving</h3>
+                            </md-grid-tile-footer>
+                        </md-grid-tile>
+                        <md-grid-tile>
+                            <md-grid-tile-footer>
+                                <h3>Weight Lifting</h3>
+                            </md-grid-tile-footer>
+                        </md-grid-tile>
+                    </md-grid-list>
+                </section>
+                <section>
                     <md-subheader class="md-primary">Other things</md-subheader>
                     <md-list layout="column" layout-padding>
                         <md-list-item class="md-3-line">
@@ -54,6 +131,7 @@
                                 </p>
                             </div>
                         </md-list-item>
+                        <md-divider></md-divider>
                         <md-list-item class="md-3-line">
                             <div class="md-list-item-text">
                                 <h3>Philosophy </h3>
@@ -63,6 +141,7 @@
                                 </p>
                             </div>
                         </md-list-item>
+                        <md-divider></md-divider>
                         <md-list-item class="md-3-line">
                             <div class="md-list-item-text">
                                 <h3>Philosophy </h3>
@@ -72,6 +151,7 @@
                                 </p>
                             </div>
                         </md-list-item>
+                        <md-divider></md-divider>
                         <md-list-item class="md-3-line">
                             <div class="md-list-item-text">
                                 <h3>Philosophy </h3>
@@ -81,6 +161,7 @@
                                 </p>
                             </div>
                         </md-list-item>
+                        <md-divider></md-divider>
                         <md-list-item class="md-3-line">
                             <div class="md-list-item-text">
                                 <h3>Philosophy </h3>
@@ -90,6 +171,7 @@
                                 </p>
                             </div>
                         </md-list-item>
+                        <md-divider></md-divider>
                         <md-list-item class="md-3-line">
                             <div class="md-list-item-text">
                                 <h3>Philosophy </h3>
@@ -99,6 +181,7 @@
                                 </p>
                             </div>
                         </md-list-item>
+                        <md-divider></md-divider>
                         <md-list-item class="md-3-line">
                             <div class="md-list-item-text">
                                 <h3>Philosophy </h3>
@@ -108,6 +191,7 @@
                                 </p>
                             </div>
                         </md-list-item>
+                        <md-divider></md-divider>
                         <md-list-item class="md-3-line">
                             <div class="md-list-item-text">
                                 <h3>Philosophy </h3>
@@ -117,6 +201,7 @@
                                 </p>
                             </div>
                         </md-list-item>
+                        <md-divider></md-divider>
                     </md-list>
                 </section>
             </md-content>
