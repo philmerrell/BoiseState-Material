@@ -8,6 +8,7 @@
 
   function AppConfig($mdThemingProvider) {
 
+    // TODO: move into SASS solution
     var boiseStatePrimary = $mdThemingProvider.extendPalette('blue', {
       '500':  '09347A'
     });

@@ -3,16 +3,18 @@ var gulp    = require('gulp'),
     pkg     = require('./package.json');
 
 var changed     = require('gulp-changed'),
+    connect     = require('gulp-connect'),
     del         = require('del'),
     inject      = require('gulp-inject'),
     jshint      = require('gulp-jshint'),
+    livereload  = require('gulp-livereload'),
     merge       = require('merge-stream'),
     requireDir  = require('require-dir'),
-    sequence    = require('run-sequence');
+    sequence    = require('run-sequence'),
+    watch       = require('gulp-watch');
 
+// TODO: Break up gulp tasks into separate files
 var tasks = requireDir('./gulp-tasks');
-
-
 
 gulp.task('clean', function() {
   return del([config.build_dir, config.compile_dir]);
@@ -43,6 +45,8 @@ gulp.task('copy', function() {
     .pipe(changed(config.build_dir))
     .pipe(gulp.dest(config.build_dir));
 
+  livereload();
+
   return merge([assets, app_js, bower_js, bower_css]);
 });
 
@@ -64,11 +68,31 @@ gulp.task('index', function() {
   });
 
   // inject the files, and copy it to the build directory
-  return target.pipe(inject(sources, { addRootSlash: false }))
-    .pipe(gulp.dest(config.build_dir));
+  return target
+    .pipe(inject(sources, { addRootSlash: false }))
+    .pipe(gulp.dest(config.build_dir))
+    .pipe(connect.reload());
 });
 
+gulp.task('connect', function() {
+  connect.server({
+    root: 'build',
+    port: 9000,
+    livereload: true
+  });
+});
 
 gulp.task('build', function() {
   sequence(['lint', 'clean'], 'copy', 'index');
+});
+
+gulp.task('watch', function() {
+  gulp.watch(['src/app/**'], ['build']);
+  //gulp.watch('src/index.html', ['index']);
+
+  connect.reload();
+});
+
+gulp.task('default', function() {
+  sequence('build', ['connect', 'watch']);
 });

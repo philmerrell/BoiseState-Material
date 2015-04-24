@@ -20,6 +20,7 @@
     }
 
     function toggleMenu() {
+
       $mdSidenav('left').toggle();
     }
 
