@@ -15,5 +15,9 @@
   ],
   "devDependencies": {
     "angular-material": "master"
+  },
+  "dependencies": {
+    "angular-ui-router": "~0.2.14",
+    "material-design-icons": "~1.0.1"
   }
 }

@@ -1,0 +1,28 @@
+[
+  {
+    "Title": "Accountancy",
+    "Department": "Accountancy",
+    "UrlId": "accountancy",
+    "College": "Business and Economics",
+    "Type": "BBA",
+    "InterestAreas": [],
+    "DegreeType": [],
+    "CampusLocation": [],
+    "MathRequirement": 4,
+    "SecondLanguage": true,
+    "Image": "assets/images/placeholder.png"
+  },
+  {
+    "Title": "Anthropology",
+    "Department": "Anthropology",
+    "UrlId": "anthropology",
+    "College": "Social Sciences and Public Affairs",
+    "Type": "BA",
+    "InterestAreas": [],
+    "DegreeType": ["Bachelors", "Minor"],
+    "CampusLocation": [],
+    "MathRequirement": 2,
+    "SecondLanguage": false,
+    "Image": "assets/images/placeholder.png"
+  }
+]

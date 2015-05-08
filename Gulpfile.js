@@ -3,14 +3,19 @@ var gulp    = require('gulp'),
     pkg     = require('./package.json');
 
 var changed     = require('gulp-changed'),
+    concat      = require('gulp-concat'),
     connect     = require('gulp-connect'),
     del         = require('del'),
     inject      = require('gulp-inject'),
     jshint      = require('gulp-jshint'),
     livereload  = require('gulp-livereload'),
     merge       = require('merge-stream'),
+    minifyHtml  = require('gulp-minify-html'),
+    ngHtml2Js   = require('gulp-ng-html2js'),
+    plumber     = require('gulp-plumber'),
     requireDir  = require('require-dir'),
     sequence    = require('run-sequence'),
+    uglify      = require('gulp-uglify'),
     watch       = require('gulp-watch');
 
 // TODO: Break up gulp tasks into separate files
@@ -60,6 +65,7 @@ gulp.task('index', function() {
     config.bower_components.js,
     'src/**/*.module.js',
     'src/**/*.js',
+    'templates-app.js',
     config.bower_components.css
   );
   var sources = gulp.src(files, {
@@ -74,6 +80,22 @@ gulp.task('index', function() {
     .pipe(connect.reload());
 });
 
+gulp.task('html2js', function() {
+  return gulp.src(config.app_files.atpl)
+    .pipe(plumber())
+    .pipe(minifyHtml({
+      empty: true,
+      spare: true,
+      quotes: true
+    }))
+    .pipe(ngHtml2Js({
+      moduleName: 'templates-app'
+    }))
+    .pipe(concat('templates-app.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest(config.build_dir));
+});
+
 gulp.task('connect', function() {
   connect.server({
     root: 'build',
@@ -83,7 +105,7 @@ gulp.task('connect', function() {
 });
 
 gulp.task('build', function() {
-  sequence(['lint', 'clean'], 'copy', 'index');
+  sequence(['lint', 'clean'], 'html2js', 'copy', 'index');
 });
 
 gulp.task('watch', function() {

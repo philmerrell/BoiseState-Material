@@ -1,0 +1,163 @@
+<md-content flex id="content">
+    <md-content layout-padding>
+        <md-chips class="custom-chips" ng-model="vm.activeFilters" readonly="true">
+            <md-chip-template>
+                <strong>{{$chip.name}}</strong>
+                <em>({{$chip.type}})</em>
+            </md-chip-template>
+            <button md-chip-remove ng-click="vm.removeFilter($chip)" class="md-primary filterchip">
+                <md-icon md-svg-icon="assets/icons/close.svg"></md-icon>
+            </button>
+        </md-chips>
+    </md-content>
+    <md-subheader class="md-accent">Degrees</md-subheader>
+    <md-grid-list
+            md-cols-sm="1" md-cols-md="2" md-cols-gt-md="4"
+            md-row-height-gt-md="1:1" md-row-height="2:2"
+            md-gutter="12px" md-gutter-gt-sm="8px" >
+        <md-grid-tile ng-repeat="degree in vm.degrees">
+            <img width="100%" ng-src="{{degree.Image}}">
+            <md-grid-tile-footer>
+                <h3>{{degree.Title}}</h3>
+            </md-grid-tile-footer>
+        </md-grid-tile>
+        <!--<md-grid-tile>-->
+            <!--<img width="100%" src="assets/images/placeholder.png">-->
+            <!--<md-grid-tile-footer>-->
+                <!--<h3>Anthropology</h3>-->
+            <!--</md-grid-tile-footer>-->
+        <!--</md-grid-tile>-->
+        <!--<md-grid-tile>-->
+            <!--<img width="100%" src="assets/images/placeholder.png">-->
+            <!--<md-grid-tile-footer>-->
+                <!--<h3>Psychology</h3>-->
+            <!--</md-grid-tile-footer>-->
+        <!--</md-grid-tile>-->
+        <!--<md-grid-tile>-->
+            <!--<img width="100%" src="assets/images/placeholder.png">-->
+            <!--<md-grid-tile-footer>-->
+                <!--<h3>Computer Science</h3>-->
+            <!--</md-grid-tile-footer>-->
+        <!--</md-grid-tile>-->
+        <!--<md-grid-tile>-->
+            <!--<img width="100%" src="assets/images/placeholder.png">-->
+            <!--<md-grid-tile-footer>-->
+                <!--<h3>Biology</h3>-->
+            <!--</md-grid-tile-footer>-->
+        <!--</md-grid-tile>-->
+        <!--<md-grid-tile>-->
+            <!--<img width="100%" src="assets/images/placeholder.png">-->
+            <!--<md-grid-tile-footer>-->
+                <!--<h3>Social Work</h3>-->
+            <!--</md-grid-tile-footer>-->
+        <!--</md-grid-tile>-->
+        <!--<md-grid-tile>-->
+            <!--<img width="100%" src="assets/images/placeholder.png">-->
+            <!--<md-grid-tile-footer>-->
+                <!--<h3>Basket Weaving</h3>-->
+            <!--</md-grid-tile-footer>-->
+        <!--</md-grid-tile>-->
+        <!--<md-grid-tile>-->
+            <!--<img width="100%" src="assets/images/placeholder.png">-->
+            <!--<md-grid-tile-footer>-->
+                <!--<h3>Weight Lifting</h3>-->
+            <!--</md-grid-tile-footer>-->
+        <!--</md-grid-tile>-->
+        <!--<md-grid-tile>-->
+            <!--<img width="100%" src="assets/images/placeholder.png">-->
+            <!--<md-grid-tile-footer>-->
+                <!--<h3>Philosophy</h3>-->
+            <!--</md-grid-tile-footer>-->
+        <!--</md-grid-tile>-->
+        <!--<md-grid-tile>-->
+            <!--<img width="100%" src="assets/images/placeholder.png">-->
+            <!--<md-grid-tile-footer>-->
+                <!--<h3>Anthropology</h3>-->
+            <!--</md-grid-tile-footer>-->
+        <!--</md-grid-tile>-->
+        <!--<md-grid-tile>-->
+            <!--<img width="100%" src="assets/images/placeholder.png">-->
+            <!--<md-grid-tile-footer>-->
+                <!--<h3>Psychology</h3>-->
+            <!--</md-grid-tile-footer>-->
+        <!--</md-grid-tile>-->
+        <!--<md-grid-tile>-->
+            <!--<img width="100%" src="assets/images/placeholder.png">-->
+            <!--<md-grid-tile-footer>-->
+                <!--<h3>Computer Science</h3>-->
+            <!--</md-grid-tile-footer>-->
+        <!--</md-grid-tile>-->
+        <!--<md-grid-tile>-->
+            <!--<img width="100%" src="assets/images/placeholder.png">-->
+            <!--<md-grid-tile-footer>-->
+                <!--<h3>Biology</h3>-->
+            <!--</md-grid-tile-footer>-->
+        <!--</md-grid-tile>-->
+        <!--<md-grid-tile>-->
+            <!--<img width="100%" src="assets/images/placeholder.png">-->
+            <!--<md-grid-tile-footer>-->
+                <!--<h3>Social Work</h3>-->
+            <!--</md-grid-tile-footer>-->
+        <!--</md-grid-tile>-->
+        <!--<md-grid-tile>-->
+            <!--<img width="100%" src="assets/images/placeholder.png">-->
+            <!--<md-grid-tile-footer>-->
+                <!--<h3>Basket Weaving</h3>-->
+            <!--</md-grid-tile-footer>-->
+        <!--</md-grid-tile>-->
+        <!--<md-grid-tile>-->
+            <!--<img width="100%" src="assets/images/placeholder.png">-->
+            <!--<md-grid-tile-footer>-->
+                <!--<h3>Weight Lifting</h3>-->
+            <!--</md-grid-tile-footer>-->
+        <!--</md-grid-tile>-->
+        <!--<md-grid-tile>-->
+            <!--<img width="100%" src="assets/images/placeholder.png">-->
+            <!--<md-grid-tile-footer>-->
+                <!--<h3>Philosophy</h3>-->
+            <!--</md-grid-tile-footer>-->
+        <!--</md-grid-tile>-->
+        <!--<md-grid-tile>-->
+            <!--<img width="100%" src="assets/images/placeholder.png">-->
+            <!--<md-grid-tile-footer>-->
+                <!--<h3>Anthropology</h3>-->
+            <!--</md-grid-tile-footer>-->
+        <!--</md-grid-tile>-->
+        <!--<md-grid-tile>-->
+            <!--<img width="100%" src="assets/images/placeholder.png">-->
+            <!--<md-grid-tile-footer>-->
+                <!--<h3>Psychology</h3>-->
+            <!--</md-grid-tile-footer>-->
+        <!--</md-grid-tile>-->
+        <!--<md-grid-tile>-->
+            <!--<img width="100%" src="assets/images/placeholder.png">-->
+            <!--<md-grid-tile-footer>-->
+                <!--<h3>Computer Science</h3>-->
+            <!--</md-grid-tile-footer>-->
+        <!--</md-grid-tile>-->
+        <!--<md-grid-tile>-->
+            <!--<img width="100%" src="assets/images/placeholder.png">-->
+            <!--<md-grid-tile-footer>-->
+                <!--<h3>Biology</h3>-->
+            <!--</md-grid-tile-footer>-->
+        <!--</md-grid-tile>-->
+        <!--<md-grid-tile>-->
+            <!--<img width="100%" src="assets/images/placeholder.png">-->
+            <!--<md-grid-tile-footer>-->
+                <!--<h3>Social Work</h3>-->
+            <!--</md-grid-tile-footer>-->
+        <!--</md-grid-tile>-->
+        <!--<md-grid-tile>-->
+            <!--<img width="100%" src="assets/images/placeholder.png">-->
+            <!--<md-grid-tile-footer>-->
+                <!--<h3>Basket Weaving</h3>-->
+            <!--</md-grid-tile-footer>-->
+        <!--</md-grid-tile>-->
+        <!--<md-grid-tile>-->
+            <!--<img width="100%" src="assets/images/placeholder.png">-->
+            <!--<md-grid-tile-footer>-->
+                <!--<h3>Weight Lifting</h3>-->
+            <!--</md-grid-tile-footer>-->
+        <!--</md-grid-tile>-->
+    </md-grid-list>
+</md-content>

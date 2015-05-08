@@ -2,18 +2,23 @@
   'use strict';
 
   angular
-    .module('boisestate', ['ngMaterial'])
+    .module('boisestate', ['ngMaterial', 'boisestate.core', 'boisestate.compare', 'boisestate.degree', 'boisestate.home', 'boisestate.services', 'templates-app'])
     .config(AppConfig)
   ;
 
-  function AppConfig($mdThemingProvider) {
+  function AppConfig($mdThemingProvider, $urlRouterProvider) {
+
+    $urlRouterProvider.otherwise( '/' );
+
+
 
     // TODO: move into SASS solution
     var boiseStatePrimary = $mdThemingProvider.extendPalette('blue', {
       '500':  '09347A'
     });
     var boiseStateAccent = $mdThemingProvider.extendPalette('orange', {
-      '500':  'F1632A'
+      'A100':  'F1632A',
+      'A200':  'F1632A'
     });
 
     $mdThemingProvider.definePalette('blue', boiseStatePrimary);
