@@ -1,1 +1,48 @@
-<h1>Compare</h1>
+<md-content flex>
+    <md-content class="md-padding">
+        <md-chips ng-model="vm.compare">
+            <md-chip-template>
+                <strong>{{$chip}}</strong>
+            </md-chip-template>
+        </md-chips>
+    </md-content>
+    <section>
+        <md-list layout-padding>
+            <md-list-item class="md-4-line">
+                <div class="md-list-item-text">
+                    <h1>Areas of Interest</h1>
+                    <p><b>Philosophy: </b> Law, Social Services</p>
+                    <p><b>Computer Science: </b> Technology</p>
+                    <p><b>Biology: </b> Health & Medicine, Technology</p>
+                </div>
+            </md-list-item>
+            <md-divider></md-divider>
+            <md-list-item class="md-4-line">
+                <div class="md-list-item-text">
+                    <h1>Math Requirement</h1>
+                    <p><b>Philosophy: </b> Low</p>
+                    <p><b>Computer Science: </b> High</p>
+                    <p><b>Biology: </b> High</p>
+                </div>
+            </md-list-item>
+            <md-divider></md-divider>
+            <md-list-item class="md-4-line">
+                <div class="md-list-item-text">
+                    <h1>Second Language Requirement</h1>
+                    <p><b>Philosophy: </b> True</p>
+                    <p><b>Computer Science: </b> False</p>
+                    <p><b>Biology: </b> False</p>
+                </div>
+            </md-list-item>
+            <md-divider></md-divider>
+            <md-list-item class="md-4-line">
+                <div class="md-list-item-text">
+                    <h1>Colleges</h1>
+                    <p><b>Philosophy: </b> College of Arts & Sciences</p>
+                    <p><b>Computer Science: </b> College of Engineering</p>
+                    <p><b>Biology: </b> College of Arts & Sciences</p>
+                </div>
+            </md-list-item>
+        </md-list>
+    </section>
+</md-content>

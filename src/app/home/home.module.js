@@ -12,11 +12,11 @@
         url: '/',
         views: {
           'main': {
-            templateUrl: 'home/home.tpl.html'
-            //controller: 'HomeCtrl as vm'
+            templateUrl: 'home/home.tpl.html',
+            controller: 'HomeCtrl as vm'
           },
           'menu': {
-            templateUrl: '../menu/degree-filter.tpl.html'
+            templateUrl: 'menu/degree-filter.tpl.html'
           }
         },
         data: {

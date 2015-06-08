@@ -2,5 +2,5 @@
   'use strict';
 
   angular
-    .module('boisestate.core', ['ui.router']);
+    .module('boisestate.core', ['ui.router', 'ngAnimate']);
 })();

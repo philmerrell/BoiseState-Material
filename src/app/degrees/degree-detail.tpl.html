@@ -1,25 +1,176 @@
 <md-content flex id="content">
-    <h1 style="margin-left: 10px;" class="oswald">{{vm.state}}</h1>
+    <!--<h1 style="margin-left: 10px;" class="oswald">{{vm.degree.Title}}</h1>-->
     <md-tabs md-dynamic-height md-border-bottom>
         <md-tab label="Explore">
-            <md-content class="md-padding">
-                <h1 class="md-display-2">Explore</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p>
+            <md-content>
+                <md-card>
+                    <md-card-content>
+                        <div layout="row" layout-sm="column">
+                            <div flex>
+                                <img width="100%" src="assets/images/placeholder.png">
+                            </div>
+                            <div flex>
+                                <h2>Overview</h2>
+                                <p>The titles of Washed Out's breakthrough song and the first single from Paracosm share the two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...</p>
+                                <p>
+                                    <b>Degrees: </b> Bachelors, Masters<br/>
+                                    <b>Location:</b> Boise, Twin Falls<br/>
+                                    <b>Format:</b> Lecture, Online<br/>
+                                    <b>Concentrations:</b> Botany Emphasis, Ecology Emphasis
+                                </p>
+                                <h3 class="md-title">This program could be a good fit for you if...</h3>
+                                <ul>
+                                    <li>You like Numbers</li>
+                                    <li>Are good at spreadsheets</li>
+                                    <li>Other things too</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <!--<div class="md-actions" layout="row" layout-align="right center">-->
+                            <!--<md-button class="md-raised md-accent">Requirements</md-button>-->
+                            <!--<md-button class="md-raised md-accent">Four-year Sequence</md-button>-->
+                        <!--</div>-->
+                    </md-card-content>
+                </md-card>
+
+                <md-card>
+                    <md-card-content>
+                        <h2>Program Highlights</h2>
+                        <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+                    </md-card-content>
+                </md-card>
             </md-content>
+
+            <md-list>
+                <md-subheader class="md-accent md-no-sticky">CAREER OUTCOMES</md-subheader>
+                <md-list-item class="md-3-line">
+                    <div class="md-list-item-text">
+                        <h3>Forensic Accounting</h3>
+                        <h4>Average Salary: $40 - $100k</h4>
+                        <p>Other objective data goes here...</p>
+                    </div>
+                </md-list-item>
+                <md-divider ></md-divider>
+                <md-list-item class="md-3-line">
+                    <!--<img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />-->
+                    <div class="md-list-item-text">
+                        <h3>Certified Internal Auditor</h3>
+                        <h4>Average Salary: $40 - $100k</h4>
+                        <p>Other objective data goes here...</p>
+                    </div>
+                </md-list-item>
+                <md-divider ></md-divider>
+                <md-list-item class="md-3-line">
+                    <!--<img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />-->
+                    <div class="md-list-item-text">
+                        <h3>Comptroller/Controller</h3>
+                        <h4>Average Salary: $40 - $100k</h4>
+                        <p>Other objective data goes here...</p>
+                    </div>
+                </md-list-item>
+                <md-divider ></md-divider>
+                <md-list-item class="md-3-line">
+                    <!--<img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />-->
+                    <div class="md-list-item-text">
+                        <h3>Accounting Clerk</h3>
+                        <h4>Average Salary: $40 - $100k</h4>
+                        <p>Other objective data goes here...</p>
+                    </div>
+                </md-list-item>
+            </md-list>
+
+            <md-subheader class="md-accent md-no-sticky">RELATED DEGREES</md-subheader>
+            <md-grid-list
+                    md-cols-sm="1" md-cols-md="2" md-cols-gt-md="4"
+                    md-row-height-gt-md="1:1" md-row-height="2:2"
+                    md-gutter="12px" md-gutter-gt-sm="8px" >
+                <md-grid-tile class="fade">
+                    <img width="100%" ng-src="assets/images/placeholder.png">
+                    <md-grid-tile-footer>
+                        <h3 class="oswald">Philosophy</h3>
+                    </md-grid-tile-footer>
+                </md-grid-tile>
+                <md-grid-tile class="fade">
+                    <img width="100%" ng-src="assets/images/placeholder.png">
+                    <md-grid-tile-footer>
+                        <h3 class="oswald">Anthropology</h3>
+                    </md-grid-tile-footer>
+                </md-grid-tile>
+                <md-grid-tile class="fade">
+                    <img width="100%" ng-src="assets/images/placeholder.png">
+                    <md-grid-tile-footer>
+                        <h3 class="oswald">Biology</h3>
+                    </md-grid-tile-footer>
+                </md-grid-tile>
+                <md-grid-tile class="fade">
+                    <img width="100%" ng-src="assets/images/placeholder.png">
+                    <md-grid-tile-footer>
+                        <h3 class="oswald">History</h3>
+                    </md-grid-tile-footer>
+                </md-grid-tile>
+            </md-grid-list>
+            <!--<md-subheader class="md-accent md-no-sticky">DEPARTMENT CONTACT INFO</md-subheader>-->
+            <!--<md-card>-->
+                <!--<md-card-content>-->
+                    <!--<div class="md-actions" layout="row" layout-align="right center">-->
+                        <!--<md-button class="md-raised md-accent">Website</md-button>-->
+                        <!--<md-button class="md-raised md-accent">More Info</md-button>-->
+                        <!--<md-button class="md-raised md-accent">Chat</md-button>-->
+                    <!--</div>-->
+                <!--</md-card-content>-->
+            <!--</md-card>-->
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
         </md-tab>
         <md-tab label="Experience">
-            <md-content class="md-padding">
-                <h1 class="md-display-2">Experience</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus. Vivamus convallis sodales ante varius gravida. Curabitur a purus vel augue ultrices ultricies id a nisl. Nullam malesuada consequat diam, a facilisis tortor volutpat et. Sed urna dolor, aliquet vitae posuere vulputate, euismod ac lorem. Sed felis risus, pulvinar at interdum quis, vehicula sed odio. Phasellus in enim venenatis, iaculis tortor eu, bibendum ante. Donec ac tellus dictum neque volutpat blandit. Praesent efficitur faucibus risus, ac auctor purus porttitor vitae. Phasellus ornare dui nec orci posuere, nec luctus mauris semper.</p>
-                <p>Morbi viverra, ante vel aliquet tincidunt, leo dolor pharetra quam, at semper massa orci nec magna. Donec posuere nec sapien sed laoreet. Etiam cursus nunc in condimentum facilisis. Etiam in tempor tortor. Vivamus faucibus egestas enim, at convallis diam pulvinar vel. Cras ac orci eget nisi maximus cursus. Nunc urna libero, viverra sit amet nisl at, hendrerit tempor turpis. Maecenas facilisis convallis mi vel tempor. Nullam vitae nunc leo. Cras sed nisl consectetur, rhoncus sapien sit amet, tempus sapien.</p>
-                <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+            <md-content>
+                <md-card>
+                    <md-card-content>
+                        <h1>Meet Our Students</h1>
+                        <div class="videoWrapper">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/RyyA6Z-gQok" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </md-card-content>
+                </md-card>
+                <md-card>
+                    <md-card-content>
+                        <h1>Meet Our Faculty</h1>
+                        <div class="videoWrapper">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/1dmyqcogDCA" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </md-card-content>
+                </md-card>
             </md-content>
         </md-tab>
-        <md-tab label="Expand">
-            <md-content class="md-padding">
-                <h1 class="md-display-2">Expand</h1>
-                <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+        <md-tab label="Plan">
+            <md-content>
+                <md-select style="width: 100%" ng-model="vm.activePlan" ng-change="vm.changePlan()" placeholder="Choose emphasis">
+                    <md-optgroup>
+                        <md-option ng-value="concentration.courses" ng-repeat="concentration in vm.concentrations">{{concentration.name}}</md-option>
+                    </md-optgroup>
+                </md-select>
             </md-content>
+
+            <div layout="row">
+                <span flex></span>
+                <md-progress-circular ng-if="vm.showLoading" class="md-accent" md-mode="indeterminate"></md-progress-circular>
+                <span flex></span>
+            </div>
+
+            <md-list ng-if="vm.plan.length && !vm.showLoading">
+                <section ng-repeat="semester in vm.plan">
+                    <md-subheader class="md-accent md-no-sticky"><span class="md-title">{{semester.Name}}</span></md-subheader>
+                    <md-list-item ng-repeat="course in semester.Courses" class="md-3-line">
+                        <div class="md-list-item-text">
+                            <div layout="row">
+                                <h3>{{course.Description}}</h3><span flex></span><span class="md-title">{{course.Credits}}</span>
+                            </div>
+                            <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+                        </div>
+                    </md-list-item>
+                </section>
+            </md-list>
         </md-tab>
     </md-tabs>
 </md-content>

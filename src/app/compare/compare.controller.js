@@ -7,6 +7,8 @@
   ;
 
   function CompareCtrl() {
+    var vm = this;
+    vm.compare = ['Philosophy', 'Computer Science', 'Biology']
 
   }
 

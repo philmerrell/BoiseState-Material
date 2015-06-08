@@ -111,6 +111,7 @@ gulp.task('build', function() {
 gulp.task('watch', function() {
   gulp.watch(['src/app/**/**.js'], ['build']);
   gulp.watch('src/index.html', ['build']);
+  gulp.watch(['src/app/**/*.tpl.html'], ['build']);
 
   connect.reload();
 });
