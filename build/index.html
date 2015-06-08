@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html ng-app="boisestate" ng-controller="AppCtrl as app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Boise State</title>
+    <meta name="viewport" content="initial-scale=1, minimal-ui" />
+    <link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400' rel='stylesheet' type='text/css'>
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css">
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+    <!-- endinject -->
+
+</head>
+<body layout="column">
+ <div layout="row">
+        <!-- Side Menu-->
+        <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left" class="md-whiteframe-z2 sidenav-blue">
+            <div ui-view="menu" layout="column" flex></div>
+        </md-sidenav>
+
+        <!-- Main Content Area -->
+        <div layout="column" flex role="main">
+            <md-toolbar class="md-whiteframe-z1 md-hue-1">
+                <div class="md-toolbar-tools">
+                    <md-button class="md-icon-button" aria-label="Menu" class="menu" hide-gt-sm ng-click="app.toggleMenu()">
+                        <md-icon md-svg-icon="assets/icons/menu.svg"></md-icon>
+                    </md-button>
+                    <h1 style="font-size: 24px !important; font-weight: 400 !important;" class="oswald">
+                        <span ng-if="app.state.current.name === 'degrees.search'">{{app.degreeService.getFilterDegreeLength()}}</span>
+                        MAJORS <span ng-if="app.degreeService.getCurrentDegreeTitle()"> > {{app.degreeService.getCurrentDegreeTitle()}}</span></h1>
+                    <!--<img height="35px" style="margin-right: 20px;" src="assets/images/nav-logo-small.png">-->
+                    <span flex></span>
+                    <md-button ng-if="app.state.current.name === 'degrees.detail'" ng-click="app.showSimpleToast()" class="md-accent md-raised">
+                        Compare
+                        <md-tooltip>
+                            Add to compare list
+                        </md-tooltip>
+                    </md-button>
+                </div>
+            </md-toolbar>
+            <div ui-view="main" layout="row"></div>
+        </div>
+        <!--<md-button class="md-accent md-fab md-fab-bottom-right">-->
+            <!--Apply-->
+        <!--</md-button>-->
+    </div>
+</body>
+
+<!-- inject:js -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/angular-material/angular-material.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/lodash/lodash.js"></script>
+<script src="src/app/app.module.js"></script>
+<script src="src/app/compare/compare.module.js"></script>
+<script src="src/app/core/core.module.js"></script>
+<script src="src/app/degrees/degrees.module.js"></script>
+<script src="src/app/home/home.module.js"></script>
+<script src="src/app/services/service.module.js"></script>
+<script src="src/app/app.controller.js"></script>
+<script src="src/app/compare/compare.controller.js"></script>
+<script src="src/app/degrees/degree-detail.controller.js"></script>
+<script src="src/app/degrees/degrees.controller.js"></script>
+<script src="src/app/degrees/degrees.filter.js"></script>
+<script src="src/app/home/home.controller.js"></script>
+<script src="src/app/menu/degree-filter.controller.js"></script>
+<script src="src/app/services/degree-filter.service.js"></script>
+<script src="src/app/services/degree.service.js"></script>
+<script src="src/app/degrees/services/plans.service.js"></script>
+<script src="templates-app.js"></script>
+<!-- endinject -->
+
+</html>
