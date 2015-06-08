@@ -1,0 +1,304 @@
+[
+  {
+    "Number": "01",
+    "Courses": [
+      {
+        "CheckPoint": false,
+        "Description": "ENGL 101 Introduction to College Writing",
+        "Credits": 3,
+        "$$hashKey": "object:1009"
+      },
+      {
+        "CheckPoint": true,
+        "Description": "MATH 143 College Algebra",
+        "Credits": 3,
+        "$$hashKey": "object:1010"
+      },
+      {
+        "CheckPoint": true,
+        "Description": "MATH 144 Analytic Trigonometry",
+        "Credits": 2,
+        "$$hashKey": "object:1011"
+      },
+      {
+        "CheckPoint": false,
+        "Description": "UF 100 Intellectual Foundations",
+        "Credits": 3,
+        "$$hashKey": "object:1012"
+      },
+      {
+        "CheckPoint": false,
+        "Description": "DLV Visual and Performing Arts",
+        "Credits": 3,
+        "$$hashKey": "object:1013"
+      }
+    ],
+    "Name": "1st Semester",
+    "$$hashKey": "object:993"
+  },
+  {
+    "Number": "02",
+    "Courses": [
+      {
+        "CheckPoint": false,
+        "Description": "ENGL 102 College Writing and Research",
+        "Credits": 3,
+        "$$hashKey": "object:1024"
+      },
+      {
+        "CheckPoint": true,
+        "Description": "DLN BIOL 191 General Biology",
+        "Credits": 4,
+        "$$hashKey": "object:1025"
+      },
+      {
+        "CheckPoint": true,
+        "Description": "DLN CHEM 111 General Chemistry I",
+        "Credits": 3,
+        "$$hashKey": "object:1026"
+      },
+      {
+        "CheckPoint": true,
+        "Description": "CHEM 111L General Chemistry I Lab",
+        "Credits": 1,
+        "$$hashKey": "object:1027"
+      },
+      {
+        "CheckPoint": false,
+        "Description": "DLM MATH 160 Survey of Calculus or MATH 170 Calculus I",
+        "Credits": 4,
+        "$$hashKey": "object:1028"
+      }
+    ],
+    "Name": "2nd Semester",
+    "$$hashKey": "object:994"
+  },
+  {
+    "Number": "03",
+    "Courses": [
+      {
+        "CheckPoint": true,
+        "Description": "BIOL 192 General Biology II",
+        "Credits": 4,
+        "$$hashKey": "object:1039"
+      },
+      {
+        "CheckPoint": true,
+        "Description": "CHEM 112 General Chemistry II",
+        "Credits": 3,
+        "$$hashKey": "object:1040"
+      },
+      {
+        "CheckPoint": true,
+        "Description": "CHEM 112L General Chemistry II Lab",
+        "Credits": 1,
+        "$$hashKey": "object:1041"
+      },
+      {
+        "CheckPoint": false,
+        "Description": "UF 200 Civic and Ethical Foundations",
+        "Credits": 3,
+        "$$hashKey": "object:1042"
+      },
+      {
+        "CheckPoint": false,
+        "Description": "DLS Communication Elective",
+        "Credits": 3,
+        "$$hashKey": "object:1043"
+      }
+    ],
+    "Name": "3rd Semester",
+    "$$hashKey": "object:995"
+  },
+  {
+    "Number": "04",
+    "Courses": [
+      {
+        "CheckPoint": true,
+        "Description": "BIOL 301 Cell Biology",
+        "Credits": 3,
+        "$$hashKey": "object:1054"
+      },
+      {
+        "CheckPoint": true,
+        "Description": "MATH 254 Applied Statistics with Computers",
+        "Credits": 3,
+        "$$hashKey": "object:1055"
+      },
+      {
+        "CheckPoint": false,
+        "Description": "PHYS 111 General Physics or PHYS 211 Physics I with Calculus",
+        "Credits": 4,
+        "$$hashKey": "object:1056"
+      },
+      {
+        "CheckPoint": false,
+        "Description": "PHYS 211L Physics I with Calculus Lab",
+        "Credits": 1,
+        "$$hashKey": "object:1057"
+      },
+      {
+        "CheckPoint": false,
+        "Description": "BOT 305 Systematic Botany",
+        "Credits": 4,
+        "$$hashKey": "object:1058"
+      }
+    ],
+    "Name": "4th Semester",
+    "$$hashKey": "object:996"
+  },
+  {
+    "Number": "05",
+    "Courses": [
+      {
+        "CheckPoint": true,
+        "Description": "CHEM 301 Survey of Organic Chemistry or CHEM 307 Organic Chemistry I",
+        "Credits": 3,
+        "$$hashKey": "object:1069"
+      },
+      {
+        "CheckPoint": false,
+        "Description": "CHEM 302 Survey of Organic Chemistry Lab or CHEM 308 Organic Chemistry I Lab",
+        "Credits": 2,
+        "$$hashKey": "object:1070"
+      },
+      {
+        "CheckPoint": true,
+        "Description": "BIOL 323 Ecology",
+        "Credits": 4,
+        "$$hashKey": "object:1071"
+      },
+      {
+        "CheckPoint": true,
+        "Description": "BIOL 343 Genetics Lecture",
+        "Credits": 3,
+        "$$hashKey": "object:1072"
+      },
+      {
+        "CheckPoint": false,
+        "Description": "PHYS 112 General Physics or PHYS 212 Physics II with Calculus",
+        "Credits": 4,
+        "$$hashKey": "object:1073"
+      },
+      {
+        "CheckPoint": false,
+        "Description": "PHYS 212L Physics II with Calculus Lab",
+        "Credits": 1,
+        "$$hashKey": "object:1074"
+      }
+    ],
+    "Name": "5th Semester",
+    "$$hashKey": "object:997"
+  },
+  {
+    "Number": "06",
+    "Courses": [
+      {
+        "CheckPoint": false,
+        "Description": "BIOL 400 Organic Evolution",
+        "Credits": 3,
+        "$$hashKey": "object:1087"
+      },
+      {
+        "CheckPoint": false,
+        "Description": "BOT 401 Plant Physiology",
+        "Credits": 4,
+        "$$hashKey": "object:1088"
+      },
+      {
+        "CheckPoint": false,
+        "Description": "CHEM 309 Organic Chemistry II",
+        "Credits": 3,
+        "$$hashKey": "object:1089"
+      },
+      {
+        "CheckPoint": false,
+        "Description": "CHEM 310 Organic Chemistry II Lab",
+        "Credits": 2,
+        "$$hashKey": "object:1090"
+      },
+      {
+        "CheckPoint": false,
+        "Description": "DLL Literature and Humanities",
+        "Credits": 3,
+        "$$hashKey": "object:1091"
+      }
+    ],
+    "Name": "6th Semester",
+    "$$hashKey": "object:998"
+  },
+  {
+    "Number": "07",
+    "Courses": [
+      {
+        "CheckPoint": false,
+        "Description": "BOT Upper-division Elective",
+        "Credits": 4,
+        "$$hashKey": "object:1102"
+      },
+      {
+        "CheckPoint": false,
+        "Description": "BOT Upper-division Elective",
+        "Credits": 4,
+        "$$hashKey": "object:1103"
+      },
+      {
+        "CheckPoint": false,
+        "Description": "DLS Communication Elective",
+        "Credits": 3,
+        "$$hashKey": "object:1104"
+      },
+      {
+        "CheckPoint": false,
+        "Description": "BIOL, BOT, or ZOOL Upper-division Elective",
+        "Credits": 4,
+        "$$hashKey": "object:1105"
+      },
+      {
+        "CheckPoint": false,
+        "Description": "Elective",
+        "Credits": 3,
+        "$$hashKey": "object:1106"
+      }
+    ],
+    "Name": "7th Semester",
+    "$$hashKey": "object:999"
+  },
+  {
+    "Number": "08",
+    "Courses": [
+      {
+        "CheckPoint": false,
+        "Description": "BIOL, BOT, or ZOOL Upper-division Elective",
+        "Credits": 4,
+        "$$hashKey": "object:1117"
+      },
+      {
+        "CheckPoint": false,
+        "Description": "BIOL 488 Senior Outcomes Assessment",
+        "Credits": 0,
+        "$$hashKey": "object:1118"
+      },
+      {
+        "CheckPoint": false,
+        "Description": "Elective",
+        "Credits": 3,
+        "$$hashKey": "object:1119"
+      },
+      {
+        "CheckPoint": false,
+        "Description": "Elective",
+        "Credits": 3,
+        "$$hashKey": "object:1120"
+      },
+      {
+        "CheckPoint": false,
+        "Description": "Elective",
+        "Credits": 2,
+        "$$hashKey": "object:1121"
+      }
+    ],
+    "Name": "8th Semester",
+    "$$hashKey": "object:1000"
+  }
+]
