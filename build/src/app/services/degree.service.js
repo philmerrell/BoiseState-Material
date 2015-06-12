@@ -27,7 +27,7 @@
     }
 
     function getDegrees() {
-      return $http.get('/assets/json/degrees.json', {cache: true});
+      return $http.get('assets/json/degrees.json', {cache: true});
     }
 
     function setFilterDegreeLength(num) {
