@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('boisestate', ['ngMaterial', 'boisestate.core', 'boisestate.compare', 'boisestate.degree', 'boisestate.home', 'boisestate.services', 'templates-app'])
+    .module('boisestate', ['ngMaterial', 'boisestate.core', 'boisestate.compare', 'boisestate.degree', 'boisestate.directives', 'boisestate.home', 'boisestate.services', 'templates-app'])
     .config(AppConfig)
   ;
 

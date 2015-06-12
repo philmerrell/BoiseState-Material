@@ -39,11 +39,9 @@
       $timeout(function() {
         vm.showLoading = false;
       }, 2000);
-
     }
 
     function getBiologyPlan() {
-
       return PlanService.getBiologyPlan().then(function(result) {
         console.log(result.data);
         vm.plan = result.data;

@@ -37,13 +37,18 @@
                             Add to compare list
                         </md-tooltip>
                     </md-button>
+                    <md-button ng-if="app.state.current.name === 'degrees.search'" ng-click="app.hideFilter = !app.hideFilter" class="md-accent md-raised">
+                        <span ng-if="!app.hideFilter">Filter</span>
+                        <span ng-if="app.hideFilter">Close</span>
+                    </md-button>
                 </div>
             </md-toolbar>
             <div ui-view="main" layout="row"></div>
         </div>
-        <!--<md-button class="md-accent md-fab md-fab-bottom-right">-->
-            <!--Apply-->
-        <!--</md-button>-->
+        <md-button ng-if="app.state.current.name === 'degrees.search'" ng-click="app.hideFilter = !app.hideFilter" class="md-accent md-fab md-fab-bottom-right">
+            <span ng-if="!app.hideFilter">Filter</span>
+            <span ng-if="app.hideFilter">Close</span>
+        </md-button>
     </div>
 </body>
 

@@ -35,7 +35,7 @@
 
     <md-divider></md-divider>
     <div layout="row">
-        <md-button flex style="margin: 0;">
+        <md-button flex style="margin: 0;" ng-click="vm.showInterests = !vm.showInterests">
             <div layout="row" layout-align="start center">
                 <h3 style="margin-left: 10px;">Areas of Interest</h3>
                 <span flex></span>
@@ -44,7 +44,7 @@
         </md-button>
     </div>
     <md-divider></md-divider>
-    <md-content class="md-padding sidenav-blue">
+    <md-content ng-if="vm.showInterests" class="md-padding sidenav-blue fade">
         <section>
             <div>
                 <md-checkbox ng-change="vm.selectInterest('Architecture', vm.interestAnswer[0], 0)" ng-model="vm.interestAnswer[0]" aria-label="Architecture">
@@ -66,7 +66,38 @@
     <md-divider></md-divider>
 
     <div layout="row">
-        <md-button flex style="margin: 0;">
+        <md-button flex style="margin: 0;" ng-click="vm.showCharacteristics = !vm.showCharacteristics">
+            <div layout="row" layout-align="start center">
+                <h3 style="margin-left: 10px;">Characteristics</h3>
+                <span flex></span>
+                <md-icon md-svg-icon="assets/icons/arrow-down.svg"></md-icon>
+            </div>
+        </md-button>
+    </div>
+    <md-divider></md-divider>
+    <md-content ng-if="vm.showCharacteristics" class="md-padding sidenav-blue fade">
+        <section>
+            <div>
+                <md-checkbox ng-change="vm.selectInterest('Architecture', vm.interestAnswer[0], 0)" ng-model="vm.interestAnswer[0]" aria-label="Architecture">
+                    Architecture
+                </md-checkbox>
+            </div>
+            <div>
+                <md-checkbox ng-change="vm.selectInterest('Health & Medicine', vm.interestAnswer[1], 1)" ng-model="vm.interestAnswer[1]" aria-label="Health & Medicine">
+                    Health & Medicine
+                </md-checkbox>
+            </div>
+            <div>
+                <md-checkbox ng-change="vm.selectInterest('Social Services', vm.interestAnswer[2], 2)" ng-model="vm.interestAnswer[2]" aria-label="Social Services">
+                    Social Services
+                </md-checkbox>
+            </div>
+        </section>
+    </md-content>
+    <md-divider></md-divider>
+
+    <div layout="row">
+        <md-button flex style="margin: 0;" ng-click="vm.showColleges = !vm.showColleges">
             <div layout="row" layout-align="start center">
                 <h3 style="margin-left: 10px;">Colleges</h3>
                 <span flex></span>
@@ -75,7 +106,7 @@
         </md-button>
     </div>
     <md-divider></md-divider>
-    <section>
+    <section ng-if="vm.showColleges" class="fade">
         <md-radio-group ng-model="vm.degreeType" ng-change="vm.selectDegreeType(vm.degreeType)">
             <md-radio-button value="Certificate"> Certificate </md-radio-button>
             <md-radio-button value="Bachelors"> Bachelors </md-radio-button>
@@ -85,7 +116,7 @@
     </section>
     <md-divider></md-divider>
     <div layout="row">
-        <md-button flex style="margin: 0;">
+        <md-button flex style="margin: 0;" ng-click="vm.showDepartments = !vm.showDepartments">
             <div layout="row" layout-align="start center">
                 <h3 style="margin-left: 10px;">Departments</h3>
                 <span flex></span>
@@ -94,7 +125,7 @@
         </md-button>
     </div>
     <md-divider></md-divider>
-    <section>
+    <section ng-if="vm.showDepartments" class="fade">
         <md-radio-group ng-model="vm.location" ng-change="vm.selectLocation(vm.location)">
             <md-radio-button value="Boise"> Boise </md-radio-button>
             <md-radio-button value="Twin Falls"> Twin Falls </md-radio-button>
