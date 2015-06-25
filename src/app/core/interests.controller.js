@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('boisestate.core')
+    .module('boisestate')
     .controller('InterestsCtrl', InterestsCtrl)
   ;
 
