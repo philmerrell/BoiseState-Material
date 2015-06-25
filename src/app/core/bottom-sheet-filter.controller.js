@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular.module('boisestate.core')
+  angular.module('boisestate')
     .controller('BottomSheetCtrl', BottomSheetCtrl);
 
   function BottomSheetCtrl($mdDialog, $mdBottomSheet) {
