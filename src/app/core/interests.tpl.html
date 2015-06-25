@@ -1,0 +1,32 @@
+<md-dialog aria-label="Mango (Fruit)">
+    <form>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>I am interested in...</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="vm.closeDialog()">
+                    <md-icon md-svg-icon="assets/icons/close.svg" aria-label="Close dialog"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <md-list>
+                <md-list-item ng-repeat="interest in vm.interests">
+                    <p> {{ interest }} </p>
+                    <md-checkbox
+                        ng-model="vm.activeInterest[$index]"
+                        aria-label="Checkbox 2"
+                        style="font-size: 1.2em;"
+                        class="md-warn">
+                </md-list-item>
+                <md-divider></md-divider>
+            </md-list>
+        </md-dialog-content>
+        <div class="md-actions" layout="row">
+            <span flex></span>
+            <md-button ng-click="vm.viewResults()" class="md-primary">
+                View
+            </md-button>
+        </div>
+    </form>
+</md-dialog>

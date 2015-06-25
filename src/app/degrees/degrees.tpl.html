@@ -10,82 +10,82 @@
             </button>
         </md-chips>
     </md-content>
-    <!-- style="position: absolute; width: 100%; z-index: 1000; background-color: rgba(255, 255, 255, 0.85)"-->
-    <md-content ng-if="app.hideFilter" class="fade">
-        <md-subheader class="md-accent md-subheader" style="background-color: rgba(255, 255, 255, 0.85)">FILTER MAJORS:</md-subheader>
-        <div layout="row">
-            <md-button flex style="margin: 0;" ng-click="vm.showInterests = !vm.showInterests">
-                <div layout="row" layout-align="start center">
-                    <h3 style="margin-left: 10px;">Areas of Interest</h3>
-                    <span flex></span>
-                    <md-icon md-svg-icon="assets/icons/arrow-down.svg"></md-icon>
-                </div>
-            </md-button>
-        </div>
-        <md-divider></md-divider>
-        <md-content ng-if="vm.showInterests" class="md-padding fade">
-            <section>
-                <label>I am interested in...</label>
-                <md-checkbox ng-repeat="interest in vm.interests"
-                    ng-model="vm.activeInterest[$index]"
-                    aria-label="Checkbox 2"
-                    class="md-warn">
-                    {{interest}}
-                </md-checkbox>
-            </section>
-        </md-content>
-        <md-divider></md-divider>
+    <!-- -->
+    <!--<md-content style="position: absolute; width: 100%; z-index: 1000; background-color: rgba(255, 255, 255, 0.85)" ng-if="app.hideFilter" class="fade">-->
+        <!--<md-subheader class="md-accent md-subheader" style="background-color: rgba(255, 255, 255, 0.85)">FILTER MAJORS:</md-subheader>-->
+        <!--<div layout="row">-->
+            <!--<md-button flex style="margin: 0;" ng-click="vm.showInterests = !vm.showInterests">-->
+                <!--<div layout="row" layout-align="start center">-->
+                    <!--<h3 style="margin-left: 10px;">Areas of Interest</h3>-->
+                    <!--<span flex></span>-->
+                    <!--<md-icon md-svg-icon="assets/icons/arrow-down.svg"></md-icon>-->
+                <!--</div>-->
+            <!--</md-button>-->
+        <!--</div>-->
+        <!--<md-divider></md-divider>-->
+        <!--<md-content ng-if="vm.showInterests" class="md-padding fade">-->
+            <!--<section>-->
+                <!--<label>I am interested in...</label>-->
+                <!--<md-checkbox ng-repeat="interest in vm.interests"-->
+                    <!--ng-model="vm.activeInterest[$index]"-->
+                    <!--aria-label="Checkbox 2"-->
+                    <!--class="md-warn">-->
+                    <!--{{interest}}-->
+                <!--</md-checkbox>-->
+            <!--</section>-->
+        <!--</md-content>-->
+        <!--<md-divider></md-divider>-->
 
-        <div layout="row">
-            <md-button flex style="margin: 0;" ng-click="vm.showCharacteristics = !vm.showCharacteristics">
-                <div layout="row" layout-align="start center">
-                    <h3 style="margin-left: 10px;">Characteristics</h3>
-                    <span flex></span>
-                    <md-icon md-svg-icon="assets/icons/arrow-down.svg"></md-icon>
-                </div>
-            </md-button>
-        </div>
-        <md-divider></md-divider>
-        <md-content ng-if="vm.showCharacteristics" class="md-padding fade">
-            <label>I like to...</label>
-            <md-checkbox ng-repeat="charateristic in vm.characteristics"
-                         ng-model="vm.activeCharacteristic[$index]"
-                         aria-label="Checkbox 2"
-                         class="md-warn">
-                {{charateristic}}
-            </md-checkbox>
-        </md-content>
+        <!--<div layout="row">-->
+            <!--<md-button flex style="margin: 0;" ng-click="vm.showCharacteristics = !vm.showCharacteristics">-->
+                <!--<div layout="row" layout-align="start center">-->
+                    <!--<h3 style="margin-left: 10px;">Characteristics</h3>-->
+                    <!--<span flex></span>-->
+                    <!--<md-icon md-svg-icon="assets/icons/arrow-down.svg"></md-icon>-->
+                <!--</div>-->
+            <!--</md-button>-->
+        <!--</div>-->
+        <!--<md-divider></md-divider>-->
+        <!--<md-content ng-if="vm.showCharacteristics" class="md-padding fade">-->
+            <!--<label>I like to...</label>-->
+            <!--<md-checkbox ng-repeat="charateristic in vm.characteristics"-->
+                         <!--ng-model="vm.activeCharacteristic[$index]"-->
+                         <!--aria-label="Checkbox 2"-->
+                         <!--class="md-warn">-->
+                <!--{{charateristic}}-->
+            <!--</md-checkbox>-->
+        <!--</md-content>-->
 
 
-        <md-divider></md-divider>
-        <div layout="row">
-            <md-button flex style="margin: 0;" ng-click="vm.showDepartments = !vm.showDepartments">
-                <div layout="row" layout-align="start center">
-                    <h3 style="margin-left: 10px;">Advanced Filters</h3>
-                    <span flex></span>
-                    <md-icon md-svg-icon="assets/icons/arrow-down.svg"></md-icon>
-                </div>
-            </md-button>
-        </div>
-        <md-divider></md-divider>
-        <section ng-if="vm.showDepartments" class="fade">
-            <md-radio-group ng-model="vm.location" ng-change="vm.selectLocation(vm.location)">
-                <md-radio-button value="Boise"> Boise </md-radio-button>
-                <md-radio-button value="Twin Falls"> Twin Falls </md-radio-button>
-                <md-radio-button value="Online"> Online </md-radio-button>
-            </md-radio-group>
-        </section>
-        <md-divider></md-divider>
-    </md-content>
+        <!--<md-divider></md-divider>-->
+        <!--<div layout="row">-->
+            <!--<md-button flex style="margin: 0;" ng-click="vm.showDepartments = !vm.showDepartments">-->
+                <!--<div layout="row" layout-align="start center">-->
+                    <!--<h3 style="margin-left: 10px;">Advanced Filters</h3>-->
+                    <!--<span flex></span>-->
+                    <!--<md-icon md-svg-icon="assets/icons/arrow-down.svg"></md-icon>-->
+                <!--</div>-->
+            <!--</md-button>-->
+        <!--</div>-->
+        <!--<md-divider></md-divider>-->
+        <!--<section ng-if="vm.showDepartments" class="fade">-->
+            <!--<md-radio-group ng-model="vm.location" ng-change="vm.selectLocation(vm.location)">-->
+                <!--<md-radio-button value="Boise"> Boise </md-radio-button>-->
+                <!--<md-radio-button value="Twin Falls"> Twin Falls </md-radio-button>-->
+                <!--<md-radio-button value="Online"> Online </md-radio-button>-->
+            <!--</md-radio-group>-->
+        <!--</section>-->
+        <!--<md-divider></md-divider>-->
+    <!--</md-content>-->
 
     <md-subheader class="md-accent md-no-sticky"><span class="md-subhead">MAJORS</span></md-subheader>
     <md-grid-list
-            md-cols-sm="1" md-cols-md="2" md-cols-lg="3" md-cols-gt-lg="4"
+            md-cols-sm="2" md-cols-md="2" md-cols-lg="3" md-cols-gt-lg="4"
             md-row-height-gt-md="1:1" md-row-height="2:2"
             md-gutter="12px" md-gutter-gt-sm="8px" >
 
         <!-- ui-sref="degrees.detail({id: degree.UrlId})" -->
-        <md-grid-tile ng-click="vm.tileFlipped[$index] = !vm.tileFlipped[$index]; $event.stopPropagation();" ng-class="{'flip-container-active': vm.tileFlipped[$index]}" class="flip-container fade" ng-repeat="degree in vm.filterDegrees = ( vm.degrees | filter:{ DegreeType: vm.degreeFilterService.getDegreeType(), Location: vm.degreeFilterService.getLocation() } | filter: vm.greaterThan(vm.degreeFilterService.getMathRequirement()) | interest ) track by degree.Id">
+        <md-grid-tile ng-click="app.flipTile($index, $event);" ng-class="{'flip-container-active': app.tileFlipped[$index]}" class="flip-container fade" ng-repeat="degree in vm.filterDegrees = ( vm.degrees | filter:{ DegreeType: vm.degreeFilterService.getDegreeType(), Location: vm.degreeFilterService.getLocation() } | filter: vm.greaterThan(vm.degreeFilterService.getMathRequirement()) | interest ) track by degree.Id">
             <div class="flipper">
                 <div class="front">
                     <img width="100%" ng-src="{{::degree.Image}}">
@@ -98,9 +98,9 @@
             </div>
 
             <md-grid-tile-footer style="z-index: 3;">
-                <h3 ng-if="!vm.tileFlipped[$index]" class="oswald">{{::degree.Title}}</h3>
+                <h3 ng-if="!app.tileFlipped[$index]" class="oswald">{{::degree.Title}}</h3>
                 <span flex></span>
-                <md-button ng-if="vm.tileFlipped[$index]" ng-click="app.state.go('degrees.detail', {id: degree.UrlId})" class="fade md-accent md-raised" >Learn More</md-button>
+                <md-button ng-if="app.tileFlipped[$index]" ng-click="app.state.go('degrees.detail', {id: degree.UrlId})" class="fade md-accent md-raised" >Learn More</md-button>
             </md-grid-tile-footer>
         </md-grid-tile>
 
