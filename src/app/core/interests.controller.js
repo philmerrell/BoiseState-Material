@@ -7,10 +7,11 @@
   ;
 
 
-  function InterestsCtrl($mdDialog, $mdBottomSheet) {
+  function InterestsCtrl($mdDialog, $mdBottomSheet, DegreeFilterService) {
     var vm = this;
     vm.closeDialog = closeDialog;
     vm.viewResults = viewResults;
+    vm.selectInterest = selectInterest;
     vm.interests = ["Agriculture", "Arts & Media", "Business & Industry", "Communications", "Computers and Technology",
       "Design", "Economic and Political Systems", "Education and Human Development", "Engineering", "Health Related",
       "History", "Interdisciplunary Studies", "Languages and Culture", "Literature", "Management and Entrepreneurship",
@@ -34,6 +35,27 @@
 
       $mdDialog.hide();
       $mdBottomSheet.hide();
+    }
+
+    function selectInterest(interest, value, index) {
+
+      var interestObj = {
+        name: interest,
+        type: 'Interest',
+        index: index
+      };
+
+      if (value) {
+
+        vm.interests.push(interestObj);
+        DegreeFilterService.addFilterChip(interestObj);
+
+      } else {
+        var obj = _.find(vm.interests, {'name': interest});
+        _.pull(vm.interests, obj);
+        DegreeFilterService.removeFilter(interestObj);
+      }
+
     }
 
 

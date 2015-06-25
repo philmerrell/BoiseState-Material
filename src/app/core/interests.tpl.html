@@ -15,6 +15,7 @@
                     <p> {{ interest }} </p>
                     <md-checkbox
                         ng-model="vm.activeInterest[$index]"
+                        ng-change="vm.selectInterest(interest, vm.activeInterest[$index], $index)"
                         aria-label="Checkbox 2"
                         style="font-size: 1.2em;"
                         class="md-warn">

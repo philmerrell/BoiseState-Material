@@ -24,21 +24,20 @@
         <div layout="column" flex role="main">
             <md-toolbar class="md-whiteframe-z1 md-hue-1">
                 <div class="md-toolbar-tools">
-                    <md-button class="md-icon-button" aria-label="Menu" class="menu" hide-gt-sm ng-click="app.toggleMenu()">
-                        <md-icon md-svg-icon="assets/icons/menu.svg"></md-icon>
-                    </md-button>
+                    <!--<md-button class="md-icon-button" aria-label="Menu" class="menu" hide-gt-sm ng-click="app.toggleMenu()">-->
+                        <!--<md-icon md-svg-icon="assets/icons/menu.svg"></md-icon>-->
+                    <!--</md-button>-->
                     <a ui-sref="degrees.list" style="font-size: 24px !important; font-weight: 400 !important;" class="oswald">
-                        <span ng-if="app.state.current.name === 'degrees.search'">{{app.degreeService.getFilterDegreeLength()}}</span>
                         MAJORS <span ng-if="app.degreeService.getCurrentDegreeTitle()"> > {{app.degreeService.getCurrentDegreeTitle()}}</span></a>
                     <!--<img height="35px" style="margin-right: 20px;" src="assets/images/nav-logo-small.png">-->
                     <span flex></span>
                     <!--ng-if="app.state.current.name === 'degrees.detail'"-->
-                    <md-button ng-click="app.showSimpleToast()" class="md-accent md-raised">
-                        Compare
-                        <md-tooltip>
-                            Add to compare list
-                        </md-tooltip>
-                    </md-button>
+                    <!--<md-button ng-click="app.showSimpleToast()" class="md-accent md-raised">-->
+                        <!--Compare-->
+                        <!--<md-tooltip>-->
+                            <!--Add to compare list-->
+                        <!--</md-tooltip>-->
+                    <!--</md-button>-->
 
 
                     <md-menu md-position-mode="target-right target">
@@ -47,9 +46,21 @@
                             filter
                         </md-button>
                         <md-menu-content width="4">
-                            <md-menu-item ng-repeat="item in ['Interests', 'Characteristics', 'Advanced']">
-                                <md-button ng-click="ctrl.announceClick($index)">
-                                    <p>{{item}}</p>
+                            <md-menu-item>
+                                <md-button ng-click="app.showInterests($event)">
+                                    <p>Interests</p>
+                                    <md-icon md-menu-align-target md-svg-icon=""></md-icon>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ng-click="app.showCharacteristics($event)">
+                                    <p>Characteristics</p>
+                                    <md-icon md-menu-align-target md-svg-icon=""></md-icon>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ng-click="app.showAdvanced()">
+                                    <p>Advanced</p>
                                     <md-icon md-menu-align-target md-svg-icon=""></md-icon>
                                 </md-button>
                             </md-menu-item>
@@ -66,10 +77,10 @@
             </md-toolbar>
             <div ui-view="main" layout="row"></div>
         </div>
-        <md-button ng-if="app.state.current.name === 'degrees.search'" ng-click="app.showFilterBottomSheet($event)" class="md-accent md-fab md-fab-bottom-right">
-            <span ng-if="!app.hideFilter">Filter</span>
-            <span ng-if="app.hideFilter">Close</span>
-        </md-button>
+        <!--<md-button ng-if="app.state.current.name === 'degrees.search'" ng-click="app.showFilterBottomSheet($event)" class="md-accent md-fab md-fab-bottom-right">-->
+            <!--<span ng-if="!app.hideFilter">Filter</span>-->
+            <!--<span ng-if="app.hideFilter">Close</span>-->
+        <!--</md-button>-->
 
     </div>
 </body>
