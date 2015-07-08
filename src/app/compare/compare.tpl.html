@@ -1,4 +1,11 @@
 <md-content>
+    <md-content class="md-padding">
+        <md-chips ng-model="vm.compare">
+            <md-chip-template>
+                <strong>{{$chip}}</strong>
+            </md-chip-template>
+        </md-chips>
+    </md-content>
     <div layout="row" layout-sm="column">
         <md-card flex-gt-sm="33">
             <md-card-content>

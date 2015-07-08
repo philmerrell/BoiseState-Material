@@ -6,7 +6,7 @@
     .controller('AppCtrl', AppCtrl)
   ;
 
-  function AppCtrl($mdSidenav, $mdToast, $mdBottomSheet, $mdDialog, $state, $scope, DegreeService) {
+  function AppCtrl($mdSidenav, $mdToast, $mdBottomSheet, $mdDialog, $mdMedia, $state, $scope, DegreeService) {
     var app = this;
 
     //app.toggleMenu = toggleMenu;
@@ -19,6 +19,7 @@
     app.showAdvanced = showAdvanced;
     app.flipTile = flipTile;
     app.tileFlipped = [];
+    app.showCompare = false;
 
     activate();
 
@@ -40,10 +41,14 @@
     }
 
     function showSimpleToast () {
+
+      var position = $mdMedia('sm') ? 'bottom right' : 'top right';
+
       $mdToast.show({
         templateUrl: 'core/toast.tpl.html',
-        hideDelay: 3000,
-        position: 'top right'
+        controller: 'ToastCtrl as vm',
+        hideDelay: 0,
+        position: position
       });
 
     }
@@ -89,6 +94,31 @@
           //$scope.alert = 'You cancelled the dialog.';
         });
     }
+
+    $scope.$watch(function() {
+      return app.tileFlipped;
+    }, function(newValues) {
+      //DegreeService.setFilterDegreeLength(newValues.length);
+      app.compareGroup = [];
+      angular.forEach(newValues, function(value, index) {
+        if(value) {
+          app.compareGroup.push(value);
+        } else {
+          _.pullAt(app.compareGroup, index);
+        }
+      });
+
+      if(app.compareGroup.length === 2) {
+        //app.showCompare = true;
+        showSimpleToast();
+      }
+
+      if(app.compareGroup.length < 2) {
+        $mdToast.cancel();
+        //app.showCompare = false;
+      }
+
+    }, true);
 
 
   }
