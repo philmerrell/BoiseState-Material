@@ -75,6 +75,7 @@
       DegreeService.setFilterDegreeLength(newValues.length);
       console.log(newValues.length);
     }, true);
+
   }
 
 })();
