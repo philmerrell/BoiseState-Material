@@ -6,17 +6,16 @@
     .controller('AppCtrl', AppCtrl)
   ;
 
-  function AppCtrl($mdSidenav, $mdToast, $mdBottomSheet, $mdDialog, $mdMedia, $state, $scope, DegreeService) {
+  function AppCtrl($mdToast, $mdDialog, $mdMedia, $state, $scope, DegreeService) {
     var app = this;
 
-    //app.toggleMenu = toggleMenu;
     app.degreeService = DegreeService;
     app.showSimpleToast = showSimpleToast;
     app.state = $state;
-    //app.showFilterBottomSheet = showFilterBottomSheet;
     app.showInterests = showInterests;
     app.showCharacteristics = showCharacteristics;
     app.showAdvanced = showAdvanced;
+    app.showConnectDialog = showConnectDialog;
     app.flipTile = flipTile;
     app.tileFlipped = [];
     app.showCompare = false;
@@ -29,11 +28,6 @@
 
     }
 
-    //function toggleMenu() {
-    //
-    //  $mdSidenav('left').toggle();
-    //}
-
     function flipTile(index, event) {
       app.tileFlipped[index] = !app.tileFlipped[index];
       event.stopPropagation();
@@ -42,7 +36,7 @@
 
     function showSimpleToast () {
 
-      var position = $mdMedia('sm') ? 'bottom right' : 'top right';
+      var position = $mdMedia('sm') ? 'top right' : 'top right';
 
       $mdToast.show({
         templateUrl: 'core/toast.tpl.html',
@@ -93,6 +87,15 @@
         }, function() {
           //$scope.alert = 'You cancelled the dialog.';
         });
+    }
+
+    function showConnectDialog(ev) {
+      $mdDialog.show({
+        templateUrl: 'connect/connect.tpl.html',
+        controller: 'ConnectCtrl as vm',
+        parent: angular.element(document.body),
+        targetEvent: ev
+      });
     }
 
     $scope.$watch(function() {
