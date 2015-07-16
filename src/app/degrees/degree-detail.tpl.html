@@ -10,7 +10,7 @@
                                 <img width="100%" src="assets/images/placeholder.png">
                             </div>
                             <div flex>
-                                <h2>Overview</h2>
+                                <h1 class="oswald">{{vm.degree.Title}}</h1>
                                 <p>The titles of Washed Out's breakthrough song and the first single from Paracosm share the two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...</p>
                                 <p>
                                     <b>Degrees: </b> Bachelors, Masters<br/>
@@ -27,10 +27,6 @@
 
                             </div>
                         </div>
-                        <!--<div class="md-actions" layout="row" layout-align="right center">-->
-                            <!--<md-button class="md-raised md-accent">Requirements</md-button>-->
-                            <!--<md-button class="md-raised md-accent">Four-year Sequence</md-button>-->
-                        <!--</div>-->
                     </md-card-content>
                 </md-card>
 
@@ -145,7 +141,7 @@
         </md-tab>
         <md-tab label="Plan">
             <md-content>
-                <md-select style="width: 100%" ng-model="vm.activePlan" ng-change="vm.changePlan()" placeholder="Choose emphasis">
+                <md-select style="" ng-model="vm.activePlan" ng-change="vm.changePlan()" placeholder="Choose emphasis">
                     <md-optgroup>
                         <md-option ng-value="concentration.courses" ng-repeat="concentration in vm.concentrations">{{concentration.name}}</md-option>
                     </md-optgroup>
@@ -160,13 +156,18 @@
 
             <md-list ng-if="vm.plan.length && !vm.showLoading">
                 <section ng-repeat="semester in vm.plan">
-                    <md-subheader class="md-accent md-no-sticky"><span class="md-title">{{semester.Name}}</span></md-subheader>
-                    <md-list-item ng-repeat="course in semester.Courses" class="md-3-line">
+                    <md-subheader class="md-accent md-no-sticky">
+                        <div layout="row">
+                            <span class="md-title">{{::semester.Name}}</span><span flex></span>{{::vm.sumCredits(semester.Courses)}} credits
+
+                        </div>
+                    </md-subheader>
+                    <md-list-item md-no-ink ng-repeat="course in semester.Courses" ng-click="course[$index].hidden = !course[$index].hidden" class="md-2-line">
                         <div class="md-list-item-text">
                             <div layout="row">
-                                <h3>{{course.Description}}</h3><span flex></span><span class="md-title">{{course.Credits}}</span>
+                                <h3>{{course.Description}}</h3><span flex></span><span class="">{{course.Credits}}</span>
                             </div>
-                            <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+                            <p ng-if="course[$index].hidden">Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
                         </div>
                     </md-list-item>
                 </section>

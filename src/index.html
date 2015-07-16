@@ -23,9 +23,11 @@
             <div layout="column" flex role="main">
                 <md-toolbar class="md-whiteframe-z1 md-hue-1">
                     <div class="md-toolbar-tools">
-                        <a ui-sref="degrees.list" style="font-size: 24px !important; font-weight: 400 !important;" class="oswald">
-                            <span ng-if="app.degreeService.getCurrentDegreeTitle()">MAJORS  > {{app.degreeService.getCurrentDegreeTitle()}}</span></a>
-                        <!--<img height="35px" style="margin-right: 20px;" src="assets/images/nav-logo-small.png">-->
+                        <!-- > {{app.degreeService.getCurrentDegreeTitle()}} -->
+                        <a ui-sref="degrees.search" style="font-size: 24px !important; font-weight: 400 !important;" class="oswald">
+                            MAJORS
+                        </a>
+                        <!--<img height="35px" style="margin-right: 20px;" src="assets/images/nav-blue-small.png">-->
                         <span flex></span>
                         <md-input-container ng-if="showSearch">
                             <label>Search</label>
@@ -42,13 +44,13 @@
                                 <md-menu-item>
                                     <md-button ng-click="app.showInterests($event)">
                                         <md-icon md-menu-align-target md-svg-icon="assets/icons/interests.svg"></md-icon>
-                                        <p>Interests</p>
+                                        <p>I'm interested in...</p>
                                     </md-button>
                                 </md-menu-item>
                                 <md-menu-item>
                                     <md-button ng-click="app.showCharacteristics($event)">
                                         <md-icon md-menu-align-target md-svg-icon="assets/icons/characteristics.svg"></md-icon>
-                                        <p>Characteristics</p>
+                                        <p>I like to...</p>
                                     </md-button>
                                 </md-menu-item>
                                 <md-menu-item>
@@ -66,29 +68,7 @@
             </div>
 
         </div>
-        <!-- ng-if="app.showCompare && app.state.current.name !== 'compare'" -->
-        <!--<div style="z-index: 2000; position: fixed; bottom: 10px; right: 5px;">-->
-            <!--<md-fab-speed-dial md-open="vm.isOpen" md-direction="up" class="md-fling">-->
-                <!--<md-fab-trigger>-->
-                    <!--<md-button aria-label="menu" class="md-fab md-accent">-->
-                        <!--<md-icon md-svg-src="assets/icons/help.svg"></md-icon>-->
-                    <!--</md-button>-->
-                <!--</md-fab-trigger>-->
-
-                <!--<md-fab-actions>-->
-                    <!--<md-button aria-label="call" class="md-fab md-raised md-mini">-->
-                        <!--<md-icon md-svg-src="assets/icons/call.svg"></md-icon>-->
-                    <!--</md-button>-->
-                    <!--<md-button aria-label="chat" class="md-fab md-raised md-mini">-->
-                        <!--<md-icon md-svg-src="assets/icons/chat.svg"></md-icon>-->
-                    <!--</md-button>-->
-                    <!--<md-button aria-label="email" class="md-fab md-raised md-mini">-->
-                        <!--<md-icon md-svg-src="assets/icons/email.svg"></md-icon>-->
-                    <!--</md-button>-->
-                <!--</md-fab-actions>-->
-            <!--</md-fab-speed-dial>-->
-        <!--</div>-->
-        <md-button ng-click="app.state.go('connect')" class="md-accent md-fab md-fab-bottom-right">
+        <md-button ng-click="app.showConnectDialog($event)" class="md-accent md-fab md-fab-bottom-right">
             <md-icon md-svg-src="assets/icons/help.svg"></md-icon>
         </md-button>
 </body>

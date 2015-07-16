@@ -19,6 +19,7 @@
     ];
 
     vm.showLoading = false;
+    vm.sumCredits = sumCredits;
 
 
     activate();
@@ -67,8 +68,19 @@
       return DegreeService.getDegrees().then(function(result) {
         vm.degree = _.find(result.data, {'UrlId': $stateParams.id});
         DegreeService.setCurrentDegreeTitle(vm.degree.Title);
+        console.log(vm.degree);
         return vm.degree;
       });
+    }
+
+    function sumCredits(courses) {
+      var total = 0;
+      _.forEach(courses, function(course) {
+        console.log(course);
+        total += course.Credits;
+      });
+
+      return total;
     }
 
   }
