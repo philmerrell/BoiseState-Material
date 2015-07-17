@@ -25,7 +25,10 @@
                 <md-toolbar class="md-whiteframe-z1 md-hue-1">
                     <div class="md-toolbar-tools">
                         <!-- > {{app.degreeService.getCurrentDegreeTitle()}} -->
-                        <a ui-sref="degrees.search" style="font-size: 24px !important; font-weight: 400 !important;" class="oswald">
+                        <md-button ng-if="app.state.current.name !== 'degrees.search'" class="md-icon-button" ng-click="app.back()">
+                            <md-icon md-svg-src="assets/icons/back.svg"></md-icon>
+                        </md-button>
+                        <a ng-if="!showSearch" ui-sref="degrees.search" style="font-size: 24px !important; font-weight: 400 !important;" class="oswald">
                             MAJORS
                         </a>
                         <!--<img height="35px" style="margin-right: 20px;" src="assets/images/nav-blue-small.png">-->
