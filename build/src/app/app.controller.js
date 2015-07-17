@@ -6,10 +6,11 @@
     .controller('AppCtrl', AppCtrl)
   ;
 
-  function AppCtrl($mdToast, $mdDialog, $mdMedia, $state, $scope, DegreeService) {
+  function AppCtrl($mdToast, $mdDialog, $mdMedia, $state, $scope, $window, DegreeService) {
     var app = this;
 
     app.degreeService = DegreeService;
+    app.back = back;
     app.showSimpleToast = showSimpleToast;
     app.state = $state;
     app.showInterests = showInterests;
@@ -26,6 +27,10 @@
 
     function activate() {
 
+    }
+
+    function back() {
+      $window.history.back();
     }
 
     function flipTile(index, event) {
