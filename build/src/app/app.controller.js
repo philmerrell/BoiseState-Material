@@ -19,7 +19,7 @@
     app.showConnectDialog = showConnectDialog;
     app.flipTile = flipTile;
     app.tileFlipped = [];
-    app.showCompare = false;
+    app.hideCompareToast = false;
 
     activate();
 
@@ -34,7 +34,8 @@
     }
 
     function flipTile(index, event) {
-      app.tileFlipped[index] = !app.tileFlipped[index];
+      DegreeService.flipTile(index);
+      //app.tileFlipped[index] = !app.tileFlipped[index];
       event.stopPropagation();
 
     }
@@ -104,8 +105,9 @@
     }
 
     $scope.$watch(function() {
-      return app.tileFlipped;
+      return DegreeService.getFlipped();
     }, function(newValues) {
+      console.log(newValues);
       //DegreeService.setFilterDegreeLength(newValues.length);
       app.compareGroup = [];
       angular.forEach(newValues, function(value, index) {
@@ -116,14 +118,16 @@
         }
       });
 
-      if(app.compareGroup.length === 2) {
-        //app.showCompare = true;
-        showSimpleToast();
-      }
+      if(app.compareGroup.length > 1) {
 
-      if(app.compareGroup.length < 2) {
-        $mdToast.cancel();
-        //app.showCompare = false;
+        if(app.hideCompareToast) {
+          showSimpleToast();
+        }
+
+      } else if(app.compareGroup.length < 2) {
+        $mdToast.cancel().then(function() {
+          app.hideCompareToast = true;
+        });
       }
 
     }, true);

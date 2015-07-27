@@ -21,7 +21,7 @@
             md-row-height-gt-md="1:1" md-row-height="2:2"
             md-gutter="12px" md-gutter-gt-sm="8px">
         <!-- ui-sref="degrees.detail({id: degree.UrlId})" -->
-        <md-grid-tile ng-click="app.flipTile($index, $event);" ng-class="{'flip-container-active': app.tileFlipped[$index]}" class="flip-container fade" ng-repeat="degree in vm.filterDegrees = ( vm.degrees | filter:{ DegreeType: vm.degreeFilterService.getDegreeType(), Location: vm.degreeFilterService.getLocation() } | filter: vm.greaterThan(vm.degreeFilterService.getMathRequirement()) | interest ) track by degree.Id">
+        <md-grid-tile ng-click="app.flipTile($index, $event);" ng-class="{'flip-container-active': app.degreeService.getTile($index)}" class="flip-container fade" ng-repeat="degree in vm.filterDegrees = ( vm.degrees | filter:{ DegreeType: vm.degreeFilterService.getDegreeType(), Location: vm.degreeFilterService.getLocation() } | filter: vm.greaterThan(vm.degreeFilterService.getMathRequirement()) | interest ) track by degree.Id">
             <div class="flipper">
                 <div class="front">
                     <img width="100%" ng-src="{{::degree.Image}}">

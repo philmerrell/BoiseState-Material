@@ -9,18 +9,40 @@
   function DegreeService($http) {
 
     var filterDegreeLength, currentDegreeTitle;
+    var tileFlipped = [];
 
     var service = {
-      getCurrentDegreeTitle: getCurrentDegreeTitle,
+      getCurrentDegreeTitle : getCurrentDegreeTitle,
       getDegrees            : getDegrees,
-      setFilterDegreeLength: setFilterDegreeLength,
-      getFilterDegreeLength: getFilterDegreeLength,
-      setCurrentDegreeTitle: setCurrentDegreeTitle
+      getFlipped            : getFlipped,
+      getTile               : getTile,
+      resetFlipped          : resetFlipped,
+      flipTile              : flipTile,
+      setFilterDegreeLength : setFilterDegreeLength,
+      getFilterDegreeLength : getFilterDegreeLength,
+      setCurrentDegreeTitle : setCurrentDegreeTitle
     };
 
     return service;
 
     ////////////////////////////
+
+    function flipTile(index) {
+      console.log(tileFlipped);
+      tileFlipped[index] = !tileFlipped[index];
+    }
+
+    function getFlipped() {
+      return tileFlipped;
+    }
+
+    function getTile(index) {
+      return tileFlipped[index];
+    }
+
+    function resetFlipped() {
+      tileFlipped = [];
+    }
 
     function getCurrentDegreeTitle() {
       return currentDegreeTitle;
